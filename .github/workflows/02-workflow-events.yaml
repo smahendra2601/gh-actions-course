@@ -4,8 +4,7 @@ on:
     push:
     pull_request:
     schedule:
-        - cron: '*/5 0 * * *'
-         # This will trigger the workflow every day at midnight
+        - cron: '*/5 20 * * *'
     workflow_dispatch:
 
 jobs:
