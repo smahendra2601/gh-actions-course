@@ -12,7 +12,10 @@ jobs:
               with:
                 node-version: '24.x'
         # Install dependencies of our react app
-            - name: Install dependencies
+            - name: Install dependenciesgit a
               run: npm ci
               working-directory: 04-using-actions/react-app
         # Run automated tests
+            - name: Run Unit tests
+              run: npm run test
+              working-directory: 04-using-actions/react-app
