@@ -3,6 +3,10 @@ on: push
 jobs:
     build:
         runs-on: ubuntu-latest
+        # Set the default working directory for all run steps in this job
+        defaults:
+            run:
+                working-directory: 04-using-actions/react-app
         #checkout the code
         steps:
             - name: Checkout code
@@ -12,10 +16,10 @@ jobs:
               with:
                 node-version: '24.x'
         # Install dependencies of our react app
-            - name: Install dependenciesgit a
+            - name: Install dependencies
               run: npm ci
-              working-directory: 04-using-actions/react-app
+              # working-directory: 04-using-actions/react-app
         # Run automated tests
             - name: Run Unit tests
               run: npm run test
-              working-directory: 04-using-actions/react-app
+              # working-directory: 04-using-actions/react-app
