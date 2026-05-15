@@ -4,5 +4,15 @@ jobs:
     build:
         runs-on: ubuntu-latest
         #checkout the code
-        # Install dependencies of our reach app
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: list files
+              run: ls
+
+            - name: Setup node
+              uses: actions/setup-node@v3
+              with:
+                node-version: '26.x'
+        # Install dependencies of our react app
         # Run automated tests
