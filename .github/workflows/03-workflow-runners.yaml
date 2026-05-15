@@ -2,11 +2,25 @@ name : 03 - Workflow Runners
 on: push
 
 jobs:
-    echo:
+    echo-ubuntu:
         runs-on: ubuntu-latest
         steps:
             - name: show the runner
               run: echo "I'm running on a ${{ runner.os }} machine with ${{ runner.arch }} architecture"
             - name: show the runner name
               run: |
-                echo "Runner OS:  $RUNNER_OS" 
+                echo "Ubuntu Runner OS:  $RUNNER_OS"
+
+    echo-windows:
+        runs-on: windows-latest
+        steps:
+            - name: show the runner name
+              run: |
+                echo "Windows Runner OS:  $RUNNER_OS"
+
+    echo-macos:
+        runs-on: macos-latest
+        steps:
+            - name: show the runner name
+              run: |
+                echo "Mac Runner OS:  $RUNNER_OS"
