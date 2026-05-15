@@ -1,0 +1,12 @@
+name : 03 - Workflow Runners
+on: push
+
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: show the runner
+              run: echo "I'm running on a ${{ runner.os }} machine with ${{ runner.arch }} architecture"
+            - name: show the runner name
+              run: |
+                echo "Runner OS:  $RUNNER_OS" 
